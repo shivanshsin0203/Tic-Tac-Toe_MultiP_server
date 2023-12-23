@@ -7,12 +7,11 @@ const httpServer = http.createServer(app);
 
 const io = new Server(httpServer, {
   cors: {
-    origin: true,
+    origin: ['http://localhost:3000',"https://tic-tac-toe-multi-p-frontend.vercel.app"],
     allowedHeaders: ["my-custom-header"],
     credentials: true
   }
 });
-
 
 io.on('connection', (socket) => {
   console.log('a user connected ' + socket.id);
