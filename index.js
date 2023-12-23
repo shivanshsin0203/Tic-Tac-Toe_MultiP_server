@@ -7,7 +7,7 @@ const httpServer = http.createServer(app);
 
 const io = new Server(httpServer, {
   cors: {
-    origin: ['http://localhost:3000',"https://tic-tac-toe-multi-p-frontend.vercel.app"],
+    origin: ['http://localhost:3000',"https://tic-tac-toe-multi-p-frontend-dinhe2byv.vercel.app"],
     allowedHeaders: ["my-custom-header"],
     credentials: true
   }
