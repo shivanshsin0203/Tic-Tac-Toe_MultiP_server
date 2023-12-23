@@ -7,11 +7,12 @@ const httpServer = http.createServer(app);
 
 const io = new Server(httpServer, {
   cors: {
-    origin: ["*"],
+    origin: true,
     allowedHeaders: ["my-custom-header"],
     credentials: true
   }
 });
+
 
 io.on('connection', (socket) => {
   console.log('a user connected ' + socket.id);
